@@ -1,0 +1,33 @@
+
+### Create a new person
+POST http://localhost:8080/persons
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com"
+}
+
+### Get a list of all persons
+GET http://localhost:8080/persons
+Accept: application/json
+
+### Get a person by ID
+GET http://localhost:8080/persons/{{personId}}
+Accept: application/json
+
+@personId = 1
+
+### Update a person by ID
+PUT http://localhost:8080/persons/{{personId}}
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "email": "jane.doe@example.com"
+}
+
+### Delete a person by ID
+DELETE http://localhost:8080/persons/{{personId}}
